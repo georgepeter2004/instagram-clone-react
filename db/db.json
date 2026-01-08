@@ -1,0 +1,176 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "user": {
+        "id": 101,
+        "username": "george_p",
+        "profile": "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      "image": "https://picsum.photos/id/237/600/600",
+      "caption": "Beautiful day to code and chill 😎",
+      "likes": "120",
+      "comments": [
+        {
+          "user": "alex",
+          "comment": "Awesome picture! 🔥"
+        },
+        {
+          "user": "maria",
+          "comment": "Love this vibe 😍"
+        },
+        {
+          "user": "smith",
+          "comment": "Keep it up bro 💪"
+        }
+      ],
+      "timestamp": "2025-11-23T10:15:00"
+    },
+    {
+      "id": "2",
+      "user": {
+        "id": 102,
+        "username": "dev_girl",
+        "profile": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      "image": "https://picsum.photos/id/1025/600/600",
+      "caption": "Late night debugging 🧠💻",
+      "likes": "256",
+      "comments": [
+        {
+          "user": "george",
+          "comment": "This is so relatable 😂"
+        },
+        {
+          "user": "rachel",
+          "comment": "You’re killing it 🔥"
+        },
+        {
+          "user": "david",
+          "comment": "Debug mode=ON 😅"
+        }
+      ],
+      "timestamp": "2025-11-24T01:30:00"
+    },
+    {
+      "id": "3",
+      "user": {
+        "id": 103,
+        "username": "travel_lover",
+        "profile": "https://randomuser.me/api/portraits/men/77.jpg"
+      },
+      "image": "https://picsum.photos/id/1003/600/600",
+      "caption": "Mountains are calling 🏔️✨",
+      "likes": "482",
+      "comments": [
+        {
+          "user": "suresh",
+          "comment": "This view is insane 😍"
+        },
+        {
+          "user": "meera",
+          "comment": "Take me with you next time!"
+        },
+        {
+          "user": "jack",
+          "comment": "Dream destination 🔥"
+        }
+      ],
+      "timestamp": "2025-11-23T18:45:00"
+    }
+  ],
+  "profilek": {
+    "username": "George peter S",
+    "profile": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  "suggestions": [
+    {
+      "id": "101",
+      "username": "george_p",
+      "profile": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "id": "102",
+      "username": "dev_girl",
+      "profile": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "id": "103",
+      "username": "travel_lover",
+      "profile": "https://randomuser.me/api/portraits/men/77.jpg"
+    },
+    {
+      "id": "104",
+      "username": "coding_ninja",
+      "profile": "https://randomuser.me/api/portraits/men/21.jpg"
+    },
+    {
+      "id": "105",
+      "username": "art_queen",
+      "profile": "https://randomuser.me/api/portraits/women/12.jpg"
+    },
+    {
+      "id": "106",
+      "username": "fitness_freak",
+      "profile": "https://randomuser.me/api/portraits/men/29.jpg"
+    },
+    {
+      "id": "107",
+      "username": "nature_snapper",
+      "profile": "https://randomuser.me/api/portraits/women/36.jpg"
+    },
+    {
+      "id": "108",
+      "username": "tech_master",
+      "profile": "https://randomuser.me/api/portraits/men/10.jpg"
+    }
+  ],
+  "story": [
+    {
+      "id": "1",
+      "user": {
+        "id": 101,
+        "username": "george_p",
+        "profile": "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      "image": "https://picsum.photos/id/237/1080/1920"
+    },
+    {
+      "id": "2",
+      "user": {
+        "id": 102,
+        "username": "dev_girl",
+        "profile": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      "image": "https://picsum.photos/id/1025/1080/1920"
+    },
+    {
+      "id": "3",
+      "user": {
+        "id": 103,
+        "username": "travel_lover",
+        "profile": "https://randomuser.me/api/portraits/men/77.jpg"
+      },
+      "image": "https://picsum.photos/id/1003/1080/1920"
+    },
+    {
+      "id": "4",
+      "user": {
+        "id": 104,
+        "username": "coding_ninja",
+        "profile": "https://randomuser.me/api/portraits/men/21.jpg"
+      },
+      "image": "https://picsum.photos/id/1011/1080/1920"
+    },
+    {
+      "id": "5",
+      "user": {
+        "id": 105,
+        "username": "art_queen",
+        "profile": "https://randomuser.me/api/portraits/women/12.jpg"
+      },
+      "image": "https://picsum.photos/id/1041/1080/1920"
+    }
+  ],
+  "followers": []
+}
