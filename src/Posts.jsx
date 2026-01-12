@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function Posts() {
-  const API = "http://localhost:5000/api"
+  const API = import.meta.env.VITE_API_URL
   const [posts, setPosts] = useState([]);
 
 

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react';
 
 function Profile() {
-    const API = "http://localhost:5000/api"
+    const API = import.meta.env.VITE_API_URL
     const [profile, setProfile] = useState();
     const [followers, setFollowers] = useState([]);
     const [unfollowed, setUnfollowed] = useState(0);

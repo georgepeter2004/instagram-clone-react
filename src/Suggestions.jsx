@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 function Suggestions() {
-  const API = "http://localhost:5000/api"
+  const API = import.meta.env.VITE_API_URL
   const [profile, setProfile] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
 

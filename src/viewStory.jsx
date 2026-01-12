@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams ,Link, useNavigate } from 'react-router-dom'
 function viewStory() {
   
-  const API = "http://localhost:5000/api"
+  const API = import.meta.env.VITE_API_URL
   const { id , tot } = useParams();
   const [story, setStory] = useState();
   const navigate = useNavigate();
