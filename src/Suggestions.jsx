@@ -2,27 +2,30 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 function Suggestions() {
-
+  const API = "http://localhost:5000/api"
   const [profile, setProfile] = useState(null);
-  const [Suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/profilek')
+    fetch(`${API}/profilek`)
       .then(res => res.json())
       .then(data => setProfile(data))
       .catch(err => console.log(err))
 
-    fetch('http://localhost:3000/suggestions')
+    fetch(`${API}/suggestion`)
       .then(res => res.json())
-      .then(data => setSuggestions(data))
+      .then(data => {
+        console.log(data)
+        setSuggestions(data)
+      })
       .catch(err => console.log(err))
 
   }, []);
 
-  const handlefollow = async (id,username)=>{
-    axios.post('http://localhost:3000/followers',{"id":id,"username":username})
-    .then(alert('following'))
-    .catch(err=>console.log(err))
+  const handlefollow = async (id, username) => {
+    axios.post(`${API}/followers`, { "id": id, "username": username })
+      .then(() => alert('following'))
+      .catch(err => console.log(err))
   }
 
   return (
@@ -43,14 +46,14 @@ function Suggestions() {
           <b className='ms-auto'>See All</b>
         </div>
 
-        {Suggestions ? (
+        {suggestions ? (
           <div >
-            {Suggestions.map((Suggestion) => (
+            {suggestions.map((Suggestion) => (
               <div className='my-2' key={Suggestion.id}>
                 <div className='d-flex' >
                   <img className="dp rounded-circle" src={Suggestion.profile} alt="" />
                   <h5>{Suggestion.username}</h5>
-                  <p className='ms-auto btn btn-primary' onClick={()=>{handlefollow(Suggestion.id,Suggestion.username)}}>Follow</p>
+                  <p className='ms-auto btn btn-primary' onClick={() => { handlefollow(Suggestion.id, Suggestion.username) }}>Follow</p>
                 </div>
               </div>))
             }

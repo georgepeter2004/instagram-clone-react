@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams ,Link, useNavigate } from 'react-router-dom'
 function viewStory() {
-
+  
+  const API = "http://localhost:5000/api"
   const { id , tot } = useParams();
-
   const [story, setStory] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:3000/story/'+ id)
+    fetch(`${API}/story/${id}`)
       .then(res => res.json())
       .then(data => setStory(data))
       .catch(err => console.log(err))

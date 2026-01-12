@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 function Stories() {
-
+  const API = "http://localhost:5000/api"
   const [stories, setStories] = useState([]);
   const navigate = useNavigate();
   let tot = 0;
   useEffect(() => {
-    fetch('http://localhost:3000/story')
+    fetch(`${API}/story`)
       .then(res => res.json())
       .then(data => setStories(data))
       .catch(err => console.log(err))

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 
 function Posts() {
-
+  const API = "http://localhost:5000/api"
   const [posts, setPosts] = useState([]);
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/posts')
+    fetch(`${API}/posts`)
       .then(res => res.json())
-      .then(data => setPosts(data))
-      .catch(err => console.log(err))
+      .then(data => {
+        console.log(data);
+        setPosts(data);
+      })
+      .catch(err => console.log(err.message))
   }, []);
 
   return (

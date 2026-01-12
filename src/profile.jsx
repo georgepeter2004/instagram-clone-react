@@ -2,18 +2,18 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 
-function profile() {
-
+function Profile() {
+    const API = "http://localhost:5000/api"
     const [profile, setProfile] = useState();
     const [followers, setFollowers] = useState([]);
     const [unfollowed, setUnfollowed] = useState(0);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/profilek')
+        axios.get(`${API}/profilek`)
             .then(data => setProfile(data.data))
             .catch(err => console.log(err))
 
-        axios.get('http://localhost:3000/followers')
+        axios.get(`${API}/followers`)
             .then(data => setFollowers(data.data))
             .catch(err => console.log(err))
     }, [unfollowed])
@@ -26,13 +26,13 @@ function profile() {
     }
 
     const handleUpdate = async () => (
-        axios.put('http://localhost:3000/profilek', profile)
+        axios.put(`${API}/profilek`, profile)
             .then(console.log("updated"))
             .catch(err => console.log(err))
     )
 
     const handleUnfollow = async (id) => (
-        axios.delete('http://localhost:3000/followers/' + id)
+        axios.delete(`${API}/followers/`+id)
             .then(alert('unfollowed'))
             .then(setUnfollowed(!unfollowed))
             .catch(err => console.log(err)))
@@ -67,4 +67,4 @@ function profile() {
     )
 }
 
-export default profile
+export default Profile;
