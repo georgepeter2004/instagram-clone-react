@@ -13,7 +13,7 @@ function Posts() {
         setPosts(data);
       })
       .catch(err => console.log(err.message))
-  }, []);
+  }, [API]);
 
   return (
     <div>

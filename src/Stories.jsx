@@ -11,7 +11,7 @@ function Stories() {
       .then(res => res.json())
       .then(data => setStories(data))
       .catch(err => console.log(err))
-  }, []);
+  }, [API]);
   return (
     
     <div className='story d-flex'>

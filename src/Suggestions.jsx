@@ -20,7 +20,7 @@ function Suggestions() {
       })
       .catch(err => console.log(err))
 
-  }, []);
+  }, [API]);
 
   const handlefollow = async (id, username) => {
     axios.post(`${API}/followers`, { "id": id, "username": username })

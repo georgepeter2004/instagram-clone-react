@@ -16,7 +16,7 @@ function Profile() {
         axios.get(`${API}/followers`)
             .then(data => setFollowers(data.data))
             .catch(err => console.log(err))
-    }, [unfollowed])
+    }, [API,unfollowed])
 
     function handleOnchange(e) {
         setProfile(prev => ({

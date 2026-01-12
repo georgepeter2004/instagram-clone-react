@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams ,Link, useNavigate } from 'react-router-dom'
-function viewStory() {
+function ViewStory() {
   
   const API = import.meta.env.VITE_API_URL
   const { id , tot } = useParams();
@@ -12,7 +12,7 @@ function viewStory() {
       .then(res => res.json())
       .then(data => setStory(data))
       .catch(err => console.log(err))
-  },[id])
+  },[API,id])
 
   if(id>tot || id<=0){
     navigate('/')
@@ -32,4 +32,4 @@ function viewStory() {
   )
 }
 
-export default viewStory
+export default ViewStory
