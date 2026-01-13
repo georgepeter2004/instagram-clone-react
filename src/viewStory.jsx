@@ -22,9 +22,9 @@ function ViewStory() {
     <>
       {story ? (
         <div className='d-flex justify-content-center align-items-center'>
-          <Link className='' to={`http://localhost:5173/story/${Number(id)-1}/${tot}`}><i className="bi bi-arrow-left-circle-fill"></i></Link>
+          <Link className='' to={`${API}${Number(id)-1}/${tot}`}><i className="bi bi-arrow-left-circle-fill"></i></Link>
           <img className='vh-100 ' src={story.image} alt="" />
-          <Link className='' to={`http://localhost:5173/story/${Number(id)+1}/${tot}`}><i className="bi bi-arrow-right-circle-fill"></i></Link>
+          <Link className='' to={`${API}${Number(id)+1}/${tot}`}><i className="bi bi-arrow-right-circle-fill"></i></Link>
         </div>
       ) : (<p>loading...</p>)
       }
