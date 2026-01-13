@@ -22,9 +22,9 @@ function ViewStory() {
     <>
       {story ? (
         <div className='d-flex justify-content-center align-items-center'>
-          <Link className='' to={`${API}${Number(id)-1}/${tot}`}><i className="bi bi-arrow-left-circle-fill"></i></Link>
+          <Link className='' to={`https://georgepeter2004.github.io/instagram-clone-react/#/story/${Number(id)-1}/${tot}`}><i className="bi bi-arrow-left-circle-fill"></i></Link>
           <img className='vh-100 ' src={story.image} alt="" />
-          <Link className='' to={`${API}${Number(id)+1}/${tot}`}><i className="bi bi-arrow-right-circle-fill"></i></Link>
+          <Link className='' to={`https://georgepeter2004.github.io/instagram-clone-react/#/story/${Number(id)+1}/${tot}`}><i className="bi bi-arrow-right-circle-fill"></i></Link>
         </div>
       ) : (<p>loading...</p>)
       }
